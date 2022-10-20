@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title> Formulários</title>
+</head>
+<body>
+	<!-- ache os campos: text, e-mail, number, tel, button, checkbox, color, date, datetime-local, file!, hidden!, image!-, month!-, password, radio, range, reset, search, submit, time, url,     -->
+	<main>
+	<form>
+		<div>
+			<h3> (text, password, submit e reset)</h3>
+			<label for="idtexto"> Texto: </label>
+		<input type="Texto" id="idtexto" name="idtexto">
+      </div>
+      <div>
+      	<br>
+		<label for="idpassword"> Senha: </label>
+		<input type="password" id="idpassword" name="idpassword">
+	</div>
+		<br>
+		<input type="submit" value="enviar" name=""> <input type="reset" name="">
+		<hr>
+	</div>
+	</form>
+	<form>
+		<h3>(radio)</h3>
+		<h3> Qual dessas é sua favorita? </h3>
+		<input type="radio" name="bolo" id="ibolo" value="bolo">
+		<label for="bolo"> bolo</label>
+		<br>
+		<input type="radio" name="pastel">
+		<label for="pastel"> pastel </label>
+		<br>
+		<input type="radio" name="coxinha">
+		<label for="coxinha"> coxinha </label>
+	</form>
+	<hr>
+	<br>
+	<form multiple>
+		<h3> (checkbox) </h3>
+		<h3> Qual dessas é sua favorita?</h3>
+		<h4> (multiple - Permite multipla escolha)</h4>
+		<input type="checkbox" name="bolo">
+		<label for="bolo"> bolo</label>
+		<br>
+		<input type="checkbox" name="pastel">
+		<label for="pastel"> pastel </label>
+	    <br>
+		<input type="checkbox" name="coxinha">
+		<label for="coxinha"> coxinha </label>
+	</form>
+	<hr>
+	<br>
+	<form>
+		<h3> (Button) </h3>
+		<input type="button" onclick="alerta('olá mundo!')" value="clique em mim!" name="">
+	</form>
+	<hr>
+	<br>
+	<form>
+		<h3> (Color)</h3>
+		<label for="favcolor"> Selecione sua cor favorita </label>
+		<input type="color" name="favcolor">
+	</form>
+	<hr>
+	<br>
+	<form>
+		<h3>(date)</h3>
+		<h3> Coloque sua data de nascimento</h3>
+		<label for="aniversário"> </label>
+		<input type="date" name="aniversário">
+	</form>
+	<hr>
+	<br>
+	<form>
+		<h3>(datetime-local)</h3>
+		<h3> Aniversário com data e tempo </h3>
+		<label for="datadeaniversário"> Aniversário</label>
+		<input type="datetime-local" name="datadeaniversário">
+	</form>
+	<hr>
+	<br>
+	<form>
+		<h3>(e-mail) </h3>
+		<h3> Botar e-mail </h3>
+		<label for="e-mail"> Digite seu e-mail: </label>
+		<input type="email" name="e-mail">
+	</form>
+	<hr>
+	<br>
+	<form>
+		<h3> Colocar um URL</h3>
+		<label for="utr"> Adicione sua página:</label>
+		<input type="url" name="url">
+	</form>
+	<hr>
+	<br>
+	<form>
+		<h3> Formulário com <xmp> <select> e <multiple> </xmp> para escolher mais de uma opção </h3>
+		<label for="cars"> Escolha um carro:</label>
+<select id="cars" name="cars" size="3" multiple>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+</select>
+	</form>
+	<hr>
+	<br>
+	<form>
+		<h3>(textarea) </h3>
+		<h3> Área para degitar textos</h3>
+		<textarea name="message" rows="10" cols="50">
+o gato está brincando no jardin
+</textarea>
+	</form>
+	<hr>
+	<br>
+	<form>
+		<h3> Formulário com tag <xmp> <legend> </xmp> para uma legenda na parte superior, e tag <xmp> <fieldset> </xmp> para fechar o formulário</h3>
+		<form action="/action_page.php">
+<fieldset>
+    <legend>Cadastro:</legend>
+    <label for="fname">Primeiro nome:</label><br>
+    <input type="text" id="fname" name="fname" value="Pedro"><br>
+    <label for="lname">Último nome:</label><br>
+    <input type="text" id="lname" name="lname" value="gonçalves"><br><br>
+    <input type="submit" value="Submit">
+</fieldset>
+       </form>
+       <hr>
+       <br>
+       <form action="/action_page.php">
+       	<h3> (atributo action) </h3>
+       	<h3> Tag <xmp><datalist></xmp></h3>
+       		<h4> Escolha um navegador</h4>
+  <input list="browsers">
+  <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+</form>
+<hr>
+<br>
+<form>
+	<h3> (week) </h3>
+	<h3> Selecionar uma semana</h3>
+  <label for="week"> Selecione uma semana:</label>
+  <input type="week" id="week" name="week">
+</form>
+<hr>
+<br>
+<form>
+	<h3> (time)</h3>
+	<h3> Selecionar uma hora</h3>
+  <label for="appt">Selecione uma hora:</label>
+  <input type="time" id="appt" name="appt">
+</form>
+<hr>
+<br>
+<form>
+	<h3> (tel) </h3>
+	<h3> Colocar o número de telefone</h3>
+  <label for="phone"> Coloque seu número de telefone:</label>
+  <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+</form>
+<hr>
+<br>
+<form>
+	<h3>(search)</h3>
+	<h3> Fazer uma pesquisa</h3>
+  <label for="gsearch">Pesquise no Google:</label>
+  <input type="search" id="gsearch" name="gsearch">
+</form>
+<hr>
+<br>
+<form>
+	<h3>(range)</h3>
+	<h3> Escolha um número de 0 a 50</h3>
+  <label for="vol">Volume (entre 0 e 50):</label>
+  <input type="range" id="vol" name="vol" min="0" max="50">
+</form>
+<hr>
+<br>
+
+<form>
+	<h3> (image)</h3>
+<input type="image" src="img_submit.gif" alt="Submit" width="48" height="48">
+</form>
+<hr>
+<br>
+
+<form>
+	<h3> (file)</h3>
+  <label for="myfile">Selecione um arquivo:</label>
+  <input type="file" id="myfile" name="myfile">
+</form> 
+<hr>
+<br>
+
+<form>
+	<h3> (hidden)</h3>
+  <label for="fname">Primeiro nome:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="hidden" id="custId" name="custId" value="3487">
+  <input type="submit" value="Submit">
+</form>     
+ <hr>
+<br>
+
+<form>
+	<h3>(month)</h3>
+  <label for="bdaymonth">Aniversário (mês e ano):</label>
+  <input type="month" id="bdaymonth" name="bdaymonth">
+</form>
+<hr>
+<br>
+
+<form>
+	<h3>(number)</h3>
+  <label for="quantity">Quantidade (entre 1 e 5):</label>
+  <input type="number" id="quantity" name="quantity" min="1" max="5">
+</form>
+<hr>
+<br>
+
+<form>
+	<h3> (time)</h3>
+  <label for="appt">Selecione um tempo:</label>
+  <input type="time" id="appt" name="appt">
+</form>
+
+</main>
+
+</body>
+</html>
